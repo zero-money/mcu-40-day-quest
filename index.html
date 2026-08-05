@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#2fae91">
+<title>MCU 40天闯关计划</title><meta name="description" content="51、STM32、数电、模电、微机原理、C语言40天闯关学习">
+<link rel="stylesheet" href="assets/styles.css"></head><body><div class="shell">
+<header class="topbar"><div class="brand"><div class="logo">40</div><div>MCU Quest<br><span class="muted" style="font-size:12px">从51到STM32</span></div></div>
+<div class="top-actions"><button class="btn soft" id="exportBtn">导出进度</button><label class="btn">导入进度<input id="importInput" type="file" accept=".json" hidden></label><button class="btn danger" id="resetBtn">清空</button></div></header>
+<section class="hero"><div class="hero-grid"><div><span class="eyebrow">🌿 2026.08.05 — 2026.09.13</span><h1>40天，把知识<br>练成一套系统。</h1>
+<p>每天同时训练51、STM32、数字电路、模拟电路、微机原理和C语言。完成六科任务、提交作品、通过题库，才解锁下一关。</p></div>
+<div class="hero-note"><strong>不是“看完课程”</strong><span class="muted">而是能手算、能写代码、能看波形、能定位故障，并完成多传感器LoRa节点。</span></div></div></section>
+<section class="stats"><div class="stat"><div class="num" id="statDays">0/40</div><div class="label">已通过关卡</div></div><div class="stat"><div class="num" id="statTasks">0%</div><div class="label">六科任务完成度</div></div><div class="stat"><div class="num" id="statStreak">0天</div><div class="label">连续打卡</div></div><div class="stat"><div class="num" id="statQuestions">560</div><div class="label">练习题与实践问答</div></div></section>
+<nav class="tabs"><button class="tab active" data-view="todayView">今日关卡</button><button class="tab" data-view="mapView">40天地图</button><button class="tab" data-view="debugView">调试训练</button><button class="tab" data-view="guideView">六科学法</button><button class="tab" data-view="randomView">随机题库</button><button class="tab" data-view="longView">长期循环</button><button class="tab" data-view="deployView">GitHub部署</button></nav>
+<main>
+<section class="view active" id="todayView"><div class="dashboard-grid"><aside class="panel day-nav"><div class="day-nav-header"><strong>关卡选择</strong><label class="muted" style="font-size:12px"><input type="checkbox" id="strict"> 严格解锁</label></div><div id="dayList" class="day-list"></div>
+<div class="top-actions" style="margin-top:14px"><button class="btn small" id="prevDay">上一关</button><button class="btn small" id="todayDay">定位今天</button><button class="btn small" id="nextDay">下一关</button></div><p class="muted" style="font-size:12px;line-height:1.6">进度保存在浏览器。请定期导出JSON，并把每日Markdown打卡提交到GitHub。</p></aside><div id="dayContent"></div></div></section>
+<section class="view" id="mapView"><div id="mapPhases" class="map-phases"></div></section><section class="view" id="debugView"><div id="debugContent"></div></section><section class="view" id="guideView"><div id="guideContent"></div></section>
+<section class="view" id="randomView"><div class="panel"><span class="eyebrow">🎲 闭卷抽题</span><h2>从560题中随机训练</h2><div class="random-controls"><label>题数 <select id="randomCount"><option>10</option><option selected>20</option><option>30</option><option>40</option></select></label><label>难度 <select id="randomDifficulty"><option>全部</option><option>基础</option><option>考研</option><option>面试</option><option>项目</option></select></label><button class="btn primary" id="drawRandom">重新抽题</button></div><div id="randomList"></div></div></section>
+<section class="view" id="longView"><div id="longContent"></div></section>
+<section class="view" id="deployView"><div class="panel"><span class="eyebrow">🐙 GitHub Pages Ready</span><h2>上传一次，此后每天提交打卡</h2><div class="deploy-grid"><div><h3>1. 创建并推送仓库</h3><div class="code">git init
+git add .
+git commit -m "init: MCU 40-day quest"
+git branch -M main
+git remote add origin https://github.com/YOUR_NAME/MCU-40-Day-Quest.git
+git push -u origin main</div></div><div><h3>2. 开启Pages</h3><p class="muted">仓库Settings → Pages → Build and deployment → Source选择GitHub Actions。项目已包含自动部署工作流。</p><h3>3. 每日提交</h3><div class="code">git add .
+git commit -m "day 01: GPIO and bit operations"
+git push</div></div></div></div></section>
+</main><footer class="footer">MCU 40天闯关计划 · 默认STM32F103C8T6 + HAL · 可按实际开发板调整</footer></div><div class="toast"></div>
+<script src="assets/plan-data.js"></script><script src="assets/app.js"></script></body></html>
